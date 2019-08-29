@@ -25,7 +25,6 @@ class ChatViewController: UIViewController, SBDChannelDelegate {
 
         SBDMain.add(self as SBDChannelDelegate, identifier: self.description)
 
-
         }
 
     

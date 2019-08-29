@@ -14,17 +14,12 @@ class ChatHistoryViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userSearchBar: UISearchBar!
     
-    var userIdAndFriendId: [String] = []
-    var groupChannelsList: [SBDGroupChannel] = []
-    var searchGroupChannel = [SBDGroupChannel]()
-    var searching = false
-    var channelListQuery: SBDGroupChannelListQuery?
+    private var groupChannelsList: [SBDGroupChannel] = []
+    private var searchGroupChannel = [SBDGroupChannel]()
+    private var chatGroupChannel: SBDGroupChannel?
+    private var channelListQuery: SBDGroupChannelListQuery?
+    private var searching = false
     private var userIndex = 0
-    var chatGroupChannel: SBDGroupChannel?
-
-    
-
-    
     private var refreshControl: UIRefreshControl?
     
     let searchController = UISearchController(searchResultsController: nil)
@@ -67,7 +62,6 @@ class ChatHistoryViewController: UIViewController, UITableViewDataSource, UITabl
             if refresh {
                 self.groupChannelsList.removeAll()
             }
-            print(groupChannels?.count)
             for group in groupChannels! {
                 print(group)
                 self.groupChannelsList.append(group)
@@ -102,10 +96,8 @@ class ChatHistoryViewController: UIViewController, UITableViewDataSource, UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: "chatHistoryCell", for: indexPath) as? ChatHistoryTableViewCell
         if searching {
         cell?.setGroupChannel(groupChannel: searchGroupChannel[indexPath.row])
-            print(" we are searchiiiiinnnnngggg")
         } else {
         cell?.setGroupChannel(groupChannel: groupChannelsList[indexPath.row])
-            print(" we are NOOOOOOOTTTTTT searchiiiiinnnnngggg")
 
         }
         return cell!
@@ -122,10 +114,8 @@ class ChatHistoryViewController: UIViewController, UITableViewDataSource, UITabl
         }
         performSegue(withIdentifier: "chatViewController", sender: nil)
 
-
     }
     
-
 
     // MARK: - Navigation
 
@@ -140,7 +130,7 @@ class ChatHistoryViewController: UIViewController, UITableViewDataSource, UITabl
 extension ChatHistoryViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+   
         groupChannelsList.removeAll()
         searchGroupChannel.removeAll()
         channelListQuery = SBDGroupChannel.createMyGroupChannelListQuery()
@@ -156,14 +146,12 @@ extension ChatHistoryViewController: UISearchBarDelegate {
             for group in groupChannels! {
                 self.searchGroupChannel.append(group)
             }
-
                 self.searching = true
                 self.tableView.reloadData()
-
         })
+      
+     
 
-        
-        
     }
    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -171,8 +159,6 @@ extension ChatHistoryViewController: UISearchBarDelegate {
         searchBar.text = ""
         searchGroupChannel.removeAll()
         groupChannelsList.removeAll()
-
-
         self.refreshGroupList()
 
 

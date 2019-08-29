@@ -35,14 +35,10 @@ class RegistrationViewController: UIViewController {
             }))
         
             self.present(alert, animated: true)
-      
-   
-            
-    
+
     }
     
-    
-    
+
     private func connect() {
         self.view.endEditing(true) // to hide the keyboard
         if SBDMain.getConnectState() != .open {
@@ -78,14 +74,10 @@ class RegistrationViewController: UIViewController {
                         }
                     })
 
-                    
-
-                   
                 }
                 
             }
-            
-            
+
             print("connection done!")
         }
       

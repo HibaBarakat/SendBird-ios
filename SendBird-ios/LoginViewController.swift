@@ -67,20 +67,7 @@ class LoginViewController: UIViewController {
     }
   
     @IBAction func clickConnectButton(_ sender: Any) {
-       
-//        if SearchForUser().searchForUser(userIdTextField.text!) == true {
-//            print("user found")
-//            connect()
-//        }else {
-//            let alert = UIAlertController(title: "User is not registered", message: "Please Sign Up", preferredStyle: .alert)
-//
-//            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-//
-//            self.present(alert, animated: true)
-//
-//        }
         connect()
-        SearchForUser().searchForUser(userIdTextField.text!)
         
     }
     

@@ -15,12 +15,8 @@ import Alamofire
 
 class UserListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-   
-
-
 
     @IBOutlet var okButton: UIView!
-    
     @IBOutlet weak var tableView: UITableView!
     
     private var userListQuery: SBDUserListQuery?
