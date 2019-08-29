@@ -9,5 +9,6 @@ target 'SendBird-ios' do
   pod 'SendBirdSDK'
   pod 'AFNetworking', '~> 3.0'
   pod 'Alamofire', '~> 4.5'
+  pod 'AlamofireImage', '~> 3.5'
 
 end

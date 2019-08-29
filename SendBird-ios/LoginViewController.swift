@@ -13,15 +13,14 @@ import SendBirdSDK
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var userIdTextField: UITextField!
-    @IBOutlet weak var nicknameTextField: UITextField!
     @IBOutlet weak var connectButton: UIButton!
+    
+    private weak var user: SBDUser?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.connectButton.addTarget(self, action: #selector(clickConnectButton(_:)) , for: .touchUpInside)
-
+ 
         // Do any additional setup after loading the view.
     }
     
@@ -29,63 +28,37 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true) // to hide the keyboard
         if SBDMain.getConnectState() != .open {
             let userId = self.userIdTextField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-            let nickname = self.nicknameTextField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-            if userId?.count == 0 || nickname?.count == 0 {
+         
+            if userId?.count == 0  {
                 print("error no user id or nickname")
                 
                 return
             }
-            let userDefault = UserDefaults.standard
-            userDefault.setValue(userId, forKey: "sendbird_user_id")
-            userDefault.setValue(nickname, forKey: "sendbird_user_nickname")
-            
+
             self.setUIsWhileConnecting()
-           
 
             SBDMain.connect(withUserId: userId!) { (user, error) in
                 if error != nil {
                     print("error in connect")
-                     let alert = UIAlertController(title: "Error connection Alert", message: "This is an alert to report an error in connecting to server.", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-                        NSLog("The \"OK\" alert occured.")
-                    }))
-                    self.present(alert, animated: true, completion: nil)
+                    self.setUIsForDefault()
+                  
+                    return
+                }else{
+                    //Main Queue -Using to update the UI after completing work in a task on a concurrent queue.
                     DispatchQueue.main.async {
                         self.setUIsForDefault()
                     }
-                    return
-                }else{
-                    print(user!)
-                    SBDMain.updateCurrentUserInfo(withNickname: nickname, profileUrl: nil) { (error) in
-                        if error != nil {
-                            print("error in update user info")
-                            return
-                        }else {
-                                DispatchQueue.main.async {
-                                    self.setUIsForDefault()
-                                    print("Going to tab bar")
-
-                                    self.performSegue(withIdentifier: "MainTabBarController", sender: nil)
-                            
-                            }
-                            
-                        }
-                }
+                    self.user = user
+                    
+                    self.performSegue(withIdentifier: "SignIn", sender: nil)
+                    
             }
-            
           
-           
             }
 
             
             print("done!")
             
-        } else {
-            SBDMain.disconnect {
-                DispatchQueue.main.async {
-                    self.setUIsForDefault()
-                }
-            }
         }
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
@@ -94,19 +67,34 @@ class LoginViewController: UIViewController {
     }
   
     @IBAction func clickConnectButton(_ sender: Any) {
-       self.connect()
-    
+       
+//        if SearchForUser().searchForUser(userIdTextField.text!) == true {
+//            print("user found")
+//            connect()
+//        }else {
+//            let alert = UIAlertController(title: "User is not registered", message: "Please Sign Up", preferredStyle: .alert)
+//
+//            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+//
+//            self.present(alert, animated: true)
+//
+//        }
+        connect()
+        SearchForUser().searchForUser(userIdTextField.text!)
+        
     }
     
+    @IBAction func clickSignUpButton(_ sender: Any) {
+          self.performSegue(withIdentifier: "SignUp", sender: nil)
+        
+    }
     private func setUIsWhileConnecting() {
         self.userIdTextField.isEnabled = false
-        self.nicknameTextField.isEnabled = false
         self.connectButton.isEnabled = false
         self.connectButton.setTitle("Connecting ...", for: .normal)
     }
     private func setUIsForDefault() {
         self.userIdTextField.isEnabled = true
-        self.nicknameTextField.isEnabled = true
         self.connectButton.isEnabled = true
         self.connectButton.setTitle("Connect", for: .normal)
     }

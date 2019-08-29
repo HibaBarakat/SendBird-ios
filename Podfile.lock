@@ -15,24 +15,29 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Alamofire (4.8.2)
-  - SendBirdSDK (3.0.146)
+  - AlamofireImage (3.5.2):
+    - Alamofire (~> 4.8)
+  - SendBirdSDK (3.0.149)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - Alamofire (~> 4.5)
+  - AlamofireImage (~> 3.5)
   - SendBirdSDK
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - Alamofire
+    - AlamofireImage
     - SendBirdSDK
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  SendBirdSDK: 1a28092e753b8181f81f42fe96337d8d15e30dc9
+  AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  SendBirdSDK: 9afafc0b44bb3ccbaf437cc83a7aeaf39c25ad8d
 
-PODFILE CHECKSUM: d3a96d9ebe1860273df97ed56ae0a46e46f64b87
+PODFILE CHECKSUM: 7748f609507452a30bfdb5347342304b8ca2aa6f
 
 COCOAPODS: 1.7.5
