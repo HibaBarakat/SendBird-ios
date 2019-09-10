@@ -8,7 +8,6 @@
 
 import UIKit
 import SendBirdSDK
-import Alamofire
 import AlamofireImage
 
 class ChatHistoryTableViewCell: UITableViewCell {

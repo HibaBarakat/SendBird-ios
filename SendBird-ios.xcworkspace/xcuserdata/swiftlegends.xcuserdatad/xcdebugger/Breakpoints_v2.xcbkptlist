@@ -57,13 +57,138 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SendBird-ios/ChatHistoryViewController.swift"
-            timestampString = "588756216.387877"
+            filePath = "SendBird-ios/UserListViewController.swift"
+            timestampString = "589727553.868636"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "retrieveListOfChannels(_:)"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "UserListViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SendBird_ios.UserListViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SendBird_ios.UserListViewController"
+                  moduleName = "SendBird-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swiftlegends/Desktop/SendBird-ios/SendBird-ios/UserListViewController.swift"
+                  timestampString = "589273130.914829"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SendBird_ios.UserListViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SendBird_ios.UserListViewController"
+                  moduleName = "SendBird-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swiftlegends/Desktop/SendBird-ios/SendBird-ios/UserListViewController.swift"
+                  timestampString = "589273130.9167351"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SendBird_ios.UserListViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SendBird_ios.UserListViewController&gt;"
+                  moduleName = "SendBird-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swiftlegends/Desktop/SendBird-ios/SendBird-ios/UserListViewController.swift"
+                  timestampString = "589273130.9181859"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SendBird_ios.UserListViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SendBird_ios.UserListViewController&gt;"
+                  moduleName = "SendBird-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swiftlegends/Desktop/SendBird-ios/SendBird-ios/UserListViewController.swift"
+                  timestampString = "589273130.92073"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "137">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SendBird_ios.UserListViewController.__deallocating_deinit"
+                  moduleName = "SendBird-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swiftlegends/Desktop/SendBird-ios/SendBird-ios/UserListViewController.swift"
+                  timestampString = "589273130.92598"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SendBird-ios/UserListViewController.swift"
+            timestampString = "589727553.8686841"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SendBird-ios/ChatViewController.swift"
+            timestampString = "589813680.078627"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "formatIncomigMessages(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SendBird-ios/ChatViewController.swift"
+            timestampString = "589813680.078693"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -74,12 +199,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SendBird-ios/ChatHistoryViewController.swift"
-            timestampString = "588756216.387931"
+            timestampString = "589809335.114329"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "retrieveListOfChannels(_:)"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "clickLogOutButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -90,13 +215,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SendBird-ios/ChatHistoryViewController.swift"
-            timestampString = "588756216.387982"
+            timestampString = "589809335.114701"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "retrieveListOfChannels(_:)"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "clickLogOutButton(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SendBird-ios/ChatHistoryViewController.swift"
+            timestampString = "589809335.114903"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "clickLogOutButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SendBird_ios.ChatHistoryViewController.clickLogOutButton(Any) -&gt; ()"
+                  moduleName = "SendBird-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swiftlegends/Desktop/SendBird-ios/SendBird-ios/ChatHistoryViewController.swift"
+                  timestampString = "589793463.4650691"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in SendBird_ios.ChatHistoryViewController.clickLogOutButton(Any) -&gt; ()"
+                  moduleName = "SendBird-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swiftlegends/Desktop/SendBird-ios/SendBird-ios/ChatHistoryViewController.swift"
+                  timestampString = "589793463.467292"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

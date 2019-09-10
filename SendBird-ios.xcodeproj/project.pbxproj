@@ -12,13 +12,13 @@
 		C4044F81231278D700E7B341 /* ChatHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4044F80231278D700E7B341 /* ChatHistoryViewController.swift */; };
 		C4044F8323129F9A00E7B341 /* ChatHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4044F8223129F9A00E7B341 /* ChatHistoryTableViewCell.swift */; };
 		C40FE58322F062BD001AB8F4 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40FE58222F062BD001AB8F4 /* UserListViewController.swift */; };
-		C40FE58522F18DF5001AB8F4 /* userListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40FE58422F18DF5001AB8F4 /* userListTableViewCell.swift */; };
+		C40FE58522F18DF5001AB8F4 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40FE58422F18DF5001AB8F4 /* UserListTableViewCell.swift */; };
 		C40FE58722F1BDCC001AB8F4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40FE58622F1BDCC001AB8F4 /* ChatViewController.swift */; };
-		C43957E022ED93EE000995B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43957DF22ED93EE000995B4 /* LoginViewController.swift */; };
 		C4812FAB22ED81E500FFD1C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4812FAA22ED81E500FFD1C1 /* AppDelegate.swift */; };
 		C4812FB022ED81E500FFD1C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4812FAE22ED81E500FFD1C1 /* Main.storyboard */; };
 		C4812FB222ED81E600FFD1C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4812FB122ED81E600FFD1C1 /* Assets.xcassets */; };
 		C4812FB522ED81E600FFD1C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4812FB322ED81E600FFD1C1 /* LaunchScreen.storyboard */; };
+		C4FCB68323212719008B2FCD /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FCB68223212719008B2FCD /* ChatTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,15 +29,15 @@
 		C4044F80231278D700E7B341 /* ChatHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistoryViewController.swift; sourceTree = "<group>"; };
 		C4044F8223129F9A00E7B341 /* ChatHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		C40FE58222F062BD001AB8F4 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
-		C40FE58422F18DF5001AB8F4 /* userListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userListTableViewCell.swift; sourceTree = "<group>"; };
+		C40FE58422F18DF5001AB8F4 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		C40FE58622F1BDCC001AB8F4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		C43957DF22ED93EE000995B4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C4812FA722ED81E500FFD1C1 /* SendBird-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SendBird-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4812FAA22ED81E500FFD1C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4812FAF22ED81E500FFD1C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4812FB122ED81E600FFD1C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4812FB422ED81E600FFD1C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4812FB622ED81E600FFD1C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4FCB68223212719008B2FCD /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,13 +91,13 @@
 			isa = PBXGroup;
 			children = (
 				C4812FAA22ED81E500FFD1C1 /* AppDelegate.swift */,
-				C43957DF22ED93EE000995B4 /* LoginViewController.swift */,
 				C4812FAE22ED81E500FFD1C1 /* Main.storyboard */,
 				C4044F7C230D1D5B00E7B341 /* RegistrationViewController.swift */,
-				C40FE58422F18DF5001AB8F4 /* userListTableViewCell.swift */,
+				C40FE58422F18DF5001AB8F4 /* UserListTableViewCell.swift */,
 				C40FE58222F062BD001AB8F4 /* UserListViewController.swift */,
 				C4044F8223129F9A00E7B341 /* ChatHistoryTableViewCell.swift */,
 				C4044F80231278D700E7B341 /* ChatHistoryViewController.swift */,
+				C4FCB68223212719008B2FCD /* ChatTableViewCell.swift */,
 				C40FE58622F1BDCC001AB8F4 /* ChatViewController.swift */,
 				C4812FB122ED81E600FFD1C1 /* Assets.xcassets */,
 				C4812FB322ED81E600FFD1C1 /* LaunchScreen.storyboard */,
@@ -223,10 +223,10 @@
 			files = (
 				C40FE58322F062BD001AB8F4 /* UserListViewController.swift in Sources */,
 				C4044F7D230D1D5B00E7B341 /* RegistrationViewController.swift in Sources */,
-				C43957E022ED93EE000995B4 /* LoginViewController.swift in Sources */,
 				C4044F81231278D700E7B341 /* ChatHistoryViewController.swift in Sources */,
 				C4812FAB22ED81E500FFD1C1 /* AppDelegate.swift in Sources */,
-				C40FE58522F18DF5001AB8F4 /* userListTableViewCell.swift in Sources */,
+				C40FE58522F18DF5001AB8F4 /* UserListTableViewCell.swift in Sources */,
+				C4FCB68323212719008B2FCD /* ChatTableViewCell.swift in Sources */,
 				C4044F8323129F9A00E7B341 /* ChatHistoryTableViewCell.swift in Sources */,
 				C40FE58722F1BDCC001AB8F4 /* ChatViewController.swift in Sources */,
 			);
