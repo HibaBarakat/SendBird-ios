@@ -13,42 +13,36 @@ import Alamofire
 
 
 
-class UserListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class UserListViewController: UIViewController{
     
 
-    @IBOutlet var okButton: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     private var userListQuery: SBDUserListQuery?
-    private var users: [SBDUser] = []
     private var refreshControl: UIRefreshControl?
-    private var userIndex = 0
-    private var channelUsers: [SBDUser] = []
-    private var channel: SBDGroupChannel?
+    var channel: SBDGroupChannel?
+    private var users: [SBDUser] = []
+    var channelUsers: [SBDUser] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        self.userListQuery = nil
-        self.loadUserList(true)
-
+        self.loadUserList()
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.addTarget(self, action: #selector(UserListViewController.refreshUserList), for: .valueChanged)
-        
         self.tableView.refreshControl = self.refreshControl
 
     }
     
-    @objc func refreshUserList() {
-        self.loadUserList(true)
+    
+  @objc func refreshUserList() {
+        self.loadUserList()
     }
     
-    func loadUserList(_ refresh: Bool) {
-        if refresh {
-            self.userListQuery = nil
-        }
+    func loadUserList() {
         
+        self.userListQuery = nil
+
         if self.userListQuery == nil {
             self.userListQuery = SBDMain.createApplicationUserListQuery()
             self.userListQuery?.limit = 20
@@ -63,9 +57,8 @@ class UserListViewController: UIViewController, UITableViewDataSource, UITableVi
                 return
             }
 
-                if refresh {
                     self.users.removeAll()
-                }
+            
                 
                 for user in users! {
                     if user.userId == SBDMain.getCurrentUser()!.userId {
@@ -80,58 +73,42 @@ class UserListViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
     }
-    
 
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            channelUsers.insert(users[indexPath.row], at: 0)
+            channelUsers.insert(SBDMain.getCurrentUser()!, at: 1)
+           
+        }
+
+    }
+   
+
+}
+extension UserListViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "userListCell", for: indexPath) as? userListTableViewCell
-       
-        cell?.user = self.users[indexPath.row]
-        cell?.userName.text = self.users[indexPath.row].nickname
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "userListCell", for: indexPath) as? UserListTableViewCell{
+            
+            cell.setUserDetails(self.users[indexPath.row])
+            return cell
+        }
         
-        return cell!
-  
+        return UITableViewCell()
+        
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 64
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        userIndex = indexPath.row
-        self.channelUsers.append(users[userIndex])
-        self.channelUsers.append(SBDMain.getCurrentUser()!)
-        self.createOneToOneChannel()
+     
     }
-    
-    func createOneToOneChannel(){
-        let channelName = users[userIndex].userId+" & "+SBDMain.getCurrentUser()!.userId
-
-
-        SBDGroupChannel.createChannel(withName: channelName, isDistinct: true, users: channelUsers, coverUrl: nil, data: nil) { (groupChannel, error) in
-            guard error == nil else {   // Error.
-                print("Error in creating channel")
-                return
-            }
-
-            self.channel = groupChannel
-            self.performSegue(withIdentifier: "chatViewController", sender: nil)
-            self.channelUsers.removeAll()
-        }
-
-        
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        if segue.identifier == "chatViewController", let vc = segue.destination as? ChatViewController{
-            vc.channel = self.channel
-        }
-    }
-   
-
 }
 

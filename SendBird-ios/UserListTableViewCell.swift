@@ -9,18 +9,23 @@
 import UIKit
 import SendBirdSDK
 import AFNetworking
-import Alamofire
+import AlamofireImage
 
-class userListTableViewCell: UITableViewCell {
+class UserListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
     
-    var user: SBDUser?
-    
-    override func awakeFromNib() {
+        override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func setUserDetails(_ user: SBDUser){
+        if let url = URL(string: user.profileUrl!){
+    self.userImage.af_setImage(withURL: url)
+    }
+        userName.text = user.userId
     }
 
     
