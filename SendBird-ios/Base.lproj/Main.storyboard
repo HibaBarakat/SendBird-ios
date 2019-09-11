@@ -240,13 +240,13 @@
                         <viewLayoutGuide key="safeArea" id="0w6-Qz-axQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chat History" id="jZA-9D-kZu">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="logout" id="sXl-Nr-0lL">
-                            <color key="tintColor" red="0.40095336349999999" green="0.2259995632" blue="0.64610905240000005" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="icons8-logout-rounded-up-34" id="sXl-Nr-0lL">
+                            <color key="tintColor" red="0.26945697120000001" green="0.19666643689999999" blue="0.64610905240000005" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="clickLogOutButton:" destination="WIs-7p-Ynl" id="vxl-wG-k6p"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="New Chat" image="addChat" id="L5W-Is-JYk">
+                        <barButtonItem key="rightBarButtonItem" title="New Chat" image="icons8-chat-34" id="L5W-Is-JYk">
                             <color key="tintColor" red="0.26945697120000001" green="0.19666643689999999" blue="0.64610905240000005" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="clickNewChatButton:" destination="WIs-7p-Ynl" id="QVi-zH-Ozt"/>
@@ -372,18 +372,18 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="742"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="incomingMessage" rowHeight="76" id="vvc-dq-vop" customClass="IncomingMessageTableViewCell" customModule="SendBird_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="76"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="incomingMessage" rowHeight="70" id="vvc-dq-vop" customClass="IncomingMessageTableViewCell" customModule="SendBird_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vvc-dq-vop" id="i9Y-lb-Oqp">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oT6-MF-GKf">
-                                                    <rect key="frame" x="20" y="19" width="58" height="38"/>
+                                                    <rect key="frame" x="20" y="19" width="58" height="32"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knr-vx-gkY">
-                                                            <rect key="frame" x="8" y="8" width="42" height="22"/>
+                                                            <rect key="frame" x="8" y="8" width="42" height="16"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -413,7 +413,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="outgoingMessage" rowHeight="57" id="Irn-GF-Tay" customClass="OutGoingMessageTableViewCell" customModule="SendBird_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="104" width="414" height="57"/>
+                                        <rect key="frame" x="0.0" y="98" width="414" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Irn-GF-Tay" id="VBB-pw-Qap">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="57"/>
@@ -521,9 +521,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="addChat" width="50" height="50"/>
+        <image name="icons8-chat-34" width="34" height="34"/>
+        <image name="icons8-logout-rounded-up-34" width="34" height="34"/>
         <image name="img_sendbird_logo" width="62" height="72"/>
-        <image name="logout" width="50" height="50"/>
         <image name="send" width="50" height="50"/>
     </resources>
 </document>
