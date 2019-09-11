@@ -132,7 +132,7 @@ class RegistrationViewController: UIViewController {
                     return
                 }else{
                   
-                    SBDMain.updateCurrentUserInfo(withNickname: self.userId, profileUrl:nil , completionHandler: { (error) in
+                    SBDMain.updateCurrentUserInfo(withNickname: self.nickname, profileUrl:nil , completionHandler: { (error) in
                         if error != nil {
                             print("error in updating user")
                         }else {

@@ -14,11 +14,12 @@
 		C40FE58322F062BD001AB8F4 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40FE58222F062BD001AB8F4 /* UserListViewController.swift */; };
 		C40FE58522F18DF5001AB8F4 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40FE58422F18DF5001AB8F4 /* UserListTableViewCell.swift */; };
 		C40FE58722F1BDCC001AB8F4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40FE58622F1BDCC001AB8F4 /* ChatViewController.swift */; };
+		C42EF5442328E10400BEDBCA /* IncomingMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EF5432328E10300BEDBCA /* IncomingMessageTableViewCell.swift */; };
+		C42EF5462328E12100BEDBCA /* OutGoingMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EF5452328E12100BEDBCA /* OutGoingMessageTableViewCell.swift */; };
 		C4812FAB22ED81E500FFD1C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4812FAA22ED81E500FFD1C1 /* AppDelegate.swift */; };
 		C4812FB022ED81E500FFD1C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4812FAE22ED81E500FFD1C1 /* Main.storyboard */; };
 		C4812FB222ED81E600FFD1C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4812FB122ED81E600FFD1C1 /* Assets.xcassets */; };
 		C4812FB522ED81E600FFD1C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4812FB322ED81E600FFD1C1 /* LaunchScreen.storyboard */; };
-		C4FCB68323212719008B2FCD /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FCB68223212719008B2FCD /* ChatTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,13 +32,14 @@
 		C40FE58222F062BD001AB8F4 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		C40FE58422F18DF5001AB8F4 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		C40FE58622F1BDCC001AB8F4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		C42EF5432328E10300BEDBCA /* IncomingMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingMessageTableViewCell.swift; sourceTree = "<group>"; };
+		C42EF5452328E12100BEDBCA /* OutGoingMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutGoingMessageTableViewCell.swift; sourceTree = "<group>"; };
 		C4812FA722ED81E500FFD1C1 /* SendBird-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SendBird-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4812FAA22ED81E500FFD1C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4812FAF22ED81E500FFD1C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4812FB122ED81E600FFD1C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4812FB422ED81E600FFD1C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4812FB622ED81E600FFD1C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4FCB68223212719008B2FCD /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,53 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C42EF5472328ECE000BEDBCA /* User List */ = {
+			isa = PBXGroup;
+			children = (
+				C40FE58422F18DF5001AB8F4 /* UserListTableViewCell.swift */,
+				C40FE58222F062BD001AB8F4 /* UserListViewController.swift */,
+			);
+			path = "User List";
+			sourceTree = "<group>";
+		};
+		C42EF5482328ED1300BEDBCA /* Chat History */ = {
+			isa = PBXGroup;
+			children = (
+				C4044F8223129F9A00E7B341 /* ChatHistoryTableViewCell.swift */,
+				C4044F80231278D700E7B341 /* ChatHistoryViewController.swift */,
+			);
+			path = "Chat History";
+			sourceTree = "<group>";
+		};
+		C42EF5492328ED2E00BEDBCA /* Chat View */ = {
+			isa = PBXGroup;
+			children = (
+				C42EF5432328E10300BEDBCA /* IncomingMessageTableViewCell.swift */,
+				C42EF5452328E12100BEDBCA /* OutGoingMessageTableViewCell.swift */,
+				C40FE58622F1BDCC001AB8F4 /* ChatViewController.swift */,
+				C42EF54A2328ED4200BEDBCA /* Asistant */,
+			);
+			path = "Chat View";
+			sourceTree = "<group>";
+		};
+		C42EF54A2328ED4200BEDBCA /* Asistant */ = {
+			isa = PBXGroup;
+			children = (
+				C4812FAA22ED81E500FFD1C1 /* AppDelegate.swift */,
+				C4812FB122ED81E600FFD1C1 /* Assets.xcassets */,
+				C4812FB322ED81E600FFD1C1 /* LaunchScreen.storyboard */,
+			);
+			path = Asistant;
+			sourceTree = "<group>";
+		};
+		C42EF54B2328ED7A00BEDBCA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C4044F7C230D1D5B00E7B341 /* RegistrationViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		C4812F9E22ED81E500FFD1C1 = {
 			isa = PBXGroup;
 			children = (
@@ -90,17 +139,11 @@
 		C4812FA922ED81E500FFD1C1 /* SendBird-ios */ = {
 			isa = PBXGroup;
 			children = (
-				C4812FAA22ED81E500FFD1C1 /* AppDelegate.swift */,
 				C4812FAE22ED81E500FFD1C1 /* Main.storyboard */,
-				C4044F7C230D1D5B00E7B341 /* RegistrationViewController.swift */,
-				C40FE58422F18DF5001AB8F4 /* UserListTableViewCell.swift */,
-				C40FE58222F062BD001AB8F4 /* UserListViewController.swift */,
-				C4044F8223129F9A00E7B341 /* ChatHistoryTableViewCell.swift */,
-				C4044F80231278D700E7B341 /* ChatHistoryViewController.swift */,
-				C4FCB68223212719008B2FCD /* ChatTableViewCell.swift */,
-				C40FE58622F1BDCC001AB8F4 /* ChatViewController.swift */,
-				C4812FB122ED81E600FFD1C1 /* Assets.xcassets */,
-				C4812FB322ED81E600FFD1C1 /* LaunchScreen.storyboard */,
+				C42EF54B2328ED7A00BEDBCA /* Login */,
+				C42EF5472328ECE000BEDBCA /* User List */,
+				C42EF5482328ED1300BEDBCA /* Chat History */,
+				C42EF5492328ED2E00BEDBCA /* Chat View */,
 				C4812FB622ED81E600FFD1C1 /* Info.plist */,
 			);
 			path = "SendBird-ios";
@@ -223,10 +266,11 @@
 			files = (
 				C40FE58322F062BD001AB8F4 /* UserListViewController.swift in Sources */,
 				C4044F7D230D1D5B00E7B341 /* RegistrationViewController.swift in Sources */,
+				C42EF5442328E10400BEDBCA /* IncomingMessageTableViewCell.swift in Sources */,
 				C4044F81231278D700E7B341 /* ChatHistoryViewController.swift in Sources */,
 				C4812FAB22ED81E500FFD1C1 /* AppDelegate.swift in Sources */,
+				C42EF5462328E12100BEDBCA /* OutGoingMessageTableViewCell.swift in Sources */,
 				C40FE58522F18DF5001AB8F4 /* UserListTableViewCell.swift in Sources */,
-				C4FCB68323212719008B2FCD /* ChatTableViewCell.swift in Sources */,
 				C4044F8323129F9A00E7B341 /* ChatHistoryTableViewCell.swift in Sources */,
 				C40FE58722F1BDCC001AB8F4 /* ChatViewController.swift in Sources */,
 			);
