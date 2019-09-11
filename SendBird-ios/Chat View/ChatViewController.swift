@@ -20,8 +20,7 @@ class ChatViewController: UIViewController {
     
     
     var channel: SBDGroupChannel?
-    var chatMessagesList: [ChatMessage] = []
-    
+    var chatMessagesList: [ChatMessage] = [] // structs are value type, it does not make sense to use weak with them since they are assigned by copy. Reference counting does not apply, so weak modifier does not make sense with them
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sendMessageView: UIView!
@@ -104,17 +103,19 @@ class ChatViewController: UIViewController {
                 let sender = userMessage.sender?.nickname
                 if sender == SBDMain.getCurrentUser()?.nickname {
                     let msg = ChatMessage(message: body, sender: sender!, isIncoming: false)
-                    chatMessagesList.insert(msg, at: 0)
+                    //chatMessagesList.insert(msg, at: 0)
+                    chatMessagesList.append(msg)
 
                 }else {
                     let msg = ChatMessage(message: body, sender: sender!, isIncoming: true)
-                    chatMessagesList.insert(msg, at: 0)
+                    //chatMessagesList.insert(msg, at: 0)
+                    chatMessagesList.append(msg)
                 }
             }
         }
+        
         DispatchQueue.main.async {
             self.tableView.reloadData()
-           //self.scrollToBottomOfChat()
             
         }
     }
@@ -176,27 +177,28 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "chatTableViewCell", for: indexPath) as? ChatTableViewCell {
-       
-            cell.setMessage(chatMessagesList[indexPath.row])
-            cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-
-            return cell
+        if chatMessagesList[indexPath.row].isIncoming {
+            
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "incomingMessage", for: indexPath) as? IncomingMessageTableViewCell {
+                cell.setIncomingMessage(chatMessagesList[indexPath.row])
+                cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
+                return cell
+            }
+        } else if chatMessagesList[indexPath.row].isIncoming == false {
+            
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "outgoingMessage", for: indexPath) as? OutGoingMessageTableViewCell{
+                cell.setOutgoingMessage(chatMessagesList[indexPath.row])
+                cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
+                return cell
+            }
+            
         }
+        
         return UITableViewCell()
 
         
     }
-    
-    func scrollToBottomOfChat(){
-        if chatMessagesList.count > 1 {
-        let indexPath = IndexPath(row: chatMessagesList.count - 1, section: 0)
-        tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-        
-        }
-    }
-    
-    
+  
 }
 
 
@@ -214,10 +216,8 @@ extension ChatViewController: SBDChannelDelegate {
             let msg = ChatMessage(message: body, sender: sender, isIncoming: true)
             self.chatMessagesList.insert(msg, at: 0)
 
-            //self.chatMessagesList.append(msg)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-               //self.scrollToBottomOfChat()
                 
             }
 
@@ -230,7 +230,6 @@ extension ChatViewController: SBDChannelDelegate {
 extension ChatViewController: UITextFieldDelegate {
     func hideKeyboard(){
         messageToBeSentTextField.resignFirstResponder()
-        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
